@@ -6,10 +6,6 @@ Welcome to my academic research page!
 
 ---
 
-## Research Track 1: Public Administration
+## Research Directionk 1: Public Administration
 
---- ## Research Direction 2: Computational Social Science
-
-## Research Area 2: Computational Social Science
-
----## Research Direction 2: Computational Social Science ---##
+## Research Directiona 2: Computational Social Science
