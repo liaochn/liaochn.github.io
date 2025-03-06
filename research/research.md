@@ -6,6 +6,6 @@ Welcome to my academic research page!
 
 ---
 
-## Research Directionk 1: Public Administration
+## Research Direction 1: Public Administration
 
-## Research Directiona 2: Computational Social Science
+## Research Direction 2: Computational Social Science
