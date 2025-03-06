@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="/assets/load-head-content.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/main.css"> <!-- 确保路径正确 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="./assets/main.js" defer></script> <!-- 引入单独的 JavaScript 文件 -->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-icon" id="menu-icon">
+                <i class="fas fa-bars"></i> <!-- 使用 FontAwesome 图标 -->
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="./index.html" > <span> &nbsp; &nbsp; &nbsp; &nbsp;</span> <i class="fas fa-home"> <span> &nbsp; &nbsp; &#124; &nbsp; </span></i></a></li>
+                <li><a href="./cv/cv.html" class="special-hover"><i class="fas fa-file-alt"></i> <span>CV</span> </a></li>
+                <li><a href="./research/research.html" class="special-hover"><i class="fas fa-book-open"></i> <span>Research</span></a></li>
+                <li><a href="./interest/interest.html" class="special-hover"><i class="fas fa-heart"></i> <span>Interest</span></a></li>
+                <li><a href="./thought/thought.html" class="special-hover"><i class="fas fa-lightbulb"></i> <span>Thought</span></a></li>
+            <!--    <li><a href="/index_zh.html"> <span>&nbsp; &nbsp; &nbsp;</span> <i class="fas fa-language"></i></a></li>  如果需要翻译 -->
+                <li><a><i class="fas fa-language"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">   <!-- 主界面 左侧加中间 -->
+        <!-- 左侧个人信息栏 -->
+        <aside class="sidebar">
+            <div class="profile">
+                <div class="profile-photo-container">
+                <img src="./assets/images/tom.jpg" alt="profile-photo" class="profile-photo">
+                </div>
+                <div class="profile-name">
+                    LI AO
+                </div>
+                <div class="profile-bio">
+                    Learning every day.
+                </div>
+                <div class="social-links">
+                    <div class="social-item">
+                        <a href="mailto:liao1@ucass.edu.cn">
+                            <i class="far fa-envelope"></i>
+                            <span>Email</span> <!-- 文字 -->
+                        </a>
+                    </div>
+                    <div class="social-item">
+                        <a href="./cv/cv.pdf" target="_blank">
+                            <i class="far fa-file-alt"></i>
+                            <span>CV.pdf</span>
+                        </a>
+                    </div>
+                    <div class="social-item">
+                        <a href="https://orcid.org/0000-0002-0876-5783" target="_blank">
+                           <img src="./assets/images/orcid-50x50.png" alt="orcid Icon" class="custom-icon">
+                            <span>ORCiD</span>
+                        </a>
+                    </div>
+                    <div class="social-item">
+                        <a href="https://github.com/liaochn" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                    <div class="social-item">
+                        <a href="https://space.bilibili.com/196727888" target="_blank">
+                            <img src="./assets/images/bilibili-40x40.png" alt="orcid Icon" class="custom-icon">
+                            <span>Bilibili</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- 主要内容区域 -->
+        <main class="content" id="content">
+            <!-- Markdown 内容将动态加载到这里 -->
+            <p>加载中...</p>
+        </main>
+    </div>
+    <!-- 页脚区域 -->
+    <footer>
+        <p class="footer-large">Copyright &copy; 2025 LI AO. All rights reserved.</p>
+        <p class="footer-small"><a href="./about.html" style="color: white; text-decoration: underline;">About</a> this site. Last updated 2025-03-05.</p>
+    </footer>
+    <script>
+    // 动态加载 Markdown 文件
+    fetch('./home.md')  //-- 修改对应页面！！！！！！！！！！！！！！！！
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('无法加载文件');
+            }
+            return response.text();
+        })
+        .then(markdown => {
+            // 将 Markdown 渲染为 HTML
+            document.getElementById('content').innerHTML = marked.parse(markdown);
+        })
+        .catch(error => {
+            console.error('加载失败:', error);
+            document.getElementById('content').innerHTML = '<p style="color: red;">加载失败，请检查控制台</p>';
+        });
+    </script>
+</body>
+</html>
