@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>追捕在逃网页-Pursuit of fugitives page</title>
+    <style>
+        /* 默认样式（桌面端） */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+        .game-info {
+            width: 600px;
+            margin: 0 auto 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .score {
+            font-size: 22px;
+            text-align: left;
+        }
+        .instructions {
+            font-size: 22px;
+            text-align: right;
+        }
+        canvas {
+            border: 2px solid #000;
+            display: block;
+            margin: 0 auto;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 18px;
+            color: #666;
+        }
+        .end-animation {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 80px;
+        }
+        .end-zh {
+                font-size: 22px;
+                margin-top: 30px;
+            }
+        .end-en {
+                font-size: 18px;
+                margin-top: 20px;
+            }
+        .end-animation a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .end-animation a:hover {
+            text-decoration: underline;
+        }
+        /* 虚拟方向键样式 */
+        .controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .controls button {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            margin-top: 20px;
+            margin: 5px;
+            background-color: #f0f0f0;
+            border: 2px solid #000;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .controls button:active {
+            background-color: #ccc;
+        }
+
+        /* 平板样式（768px 以下） */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 24px;
+                margin-top: 20px;
+            }
+            h2 {
+                font-size: 18px;
+            }
+            .game-info {
+                width: 90%;
+                max-width: 400px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .score, .instructions {
+                font-size: 16px;
+                margin: 5px 0;
+            }
+            canvas {
+                width: 90%;
+                max-width: 400px;
+                height: auto;
+            }
+            .footer {
+                font-size: 14px;
+            }
+            .end-animation {
+            display: none;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 50px;
+            }
+            /* 虚拟方向键样式 */
+            .controls {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+            .controls button {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+                margin-top: 20px;
+                margin: 5px;
+                background-color: #f0f0f0;
+                border: 2px solid #000;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+            .controls button:active {
+                background-color: #ccc;
+            }
+        }
+
+        /* 手机样式（480px 以下） */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 20px;
+                margin-top: 15px;
+            }
+            h2 {
+                font-size: 16px;
+            }
+            .game-info {
+                width: 100%;
+                max-width: 300px;
+            }
+            .score, .instructions {
+                font-size: 14px;
+            }
+            canvas {
+                width: 100%;
+                max-width: 300px;
+            }
+            .footer {
+                font-size: 12px;
+            }
+            .end-animation {
+            display: none;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 40px;
+            }
+            .end-zh {
+                font-size: 16px;
+                margin-top: 20px;
+            }
+            .end-en {
+                font-size: 14px;
+                margin-top: 15px;
+            }
+            /* 虚拟方向键样式 */
+            .controls {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+            .controls button {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+                margin-top: 20px;
+                margin: 5px;
+                background-color: #f0f0f0;
+                border: 2px solid #000;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+            .controls button:active {
+                background-color: #ccc;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>追捕在逃网页</h1>
+    <h2>Pursuit of fugitives page</h2>
+    <div class="game-info">
+        <div class="score" id="score">Score: 0</div>
+        <div class="instructions">Control: ↑，↓，←，→</div>
+    </div>
+    <canvas id="gameCanvas" width="600" height="600"></canvas>
+
+    <!-- 虚拟方向键（仅在小屏幕显示） -->
+    <div class="controls" id="controls">
+        <button id="up">↑</button>
+        <button id="left">←</button>
+        <button id="down">↓</button>
+        <button id="right">→</button>
+    </div>
+
+    <div class="footer">&copy; <span id="year"></span> by LI AO</div>
+
+    <!-- 结束动画 -->
+    <div class="end-animation" id="EndAnimation">
+        <div>👮‍😒🚓</div>
+        <div class="end-zh">
+            成功抓捕在逃网页，回<a href="../index.html">首页</a>告诉站长
+        </div>
+        <div class="end-en">
+            <p>Successfully caught the runaway webpage. <br>Return to the <a href="../index.html">homepage</a> to inform the webmaster.</p>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        const gridSize = 30;
+        const tileCount = canvas.width / gridSize;
+
+        let policeCars = [{ x: 10, y: 10, emoji: '👮‍' }];
+        let food = { x: 5, y: 5 };
+        let direction = { x: 0, y: 0 };
+        let score = 0;
+
+        const policeCarEmoji = '🚓';
+        const foodEmoji = '😂';
+
+        const EndAnimation = document.getElementById('EndAnimation');
+        const scoreElement = document.getElementById('score');
+        const controls = document.getElementById('controls');
+
+        // 虚拟方向键事件绑定
+        const upButton = document.getElementById('up');
+        const leftButton = document.getElementById('left');
+        const downButton = document.getElementById('down');
+        const rightButton = document.getElementById('right');
+
+        upButton.addEventListener('click', () => move('up'));
+        leftButton.addEventListener('click', () => move('left'));
+        downButton.addEventListener('click', () => move('down'));
+        rightButton.addEventListener('click', () => move('right'));
+
+        function move(dir) {
+            if (dir === 'up' && direction.y === 0) direction = { x: 0, y: -1 };
+            if (dir === 'down' && direction.y === 0) direction = { x: 0, y: 1 };
+            if (dir === 'left' && direction.x === 0) direction = { x: -1, y: 0 };
+            if (dir === 'right' && direction.x === 0) direction = { x: 1, y: 0 };
+        }
+
+        function gameLoop() {
+            update();
+            draw();
+            if (score < 1) { // 分数达到 5 时停止游戏
+                setTimeout(gameLoop, 100);
+            } else {
+                showEndAnimation();
+            }
+        }
+
+        function update() {
+            const head = { x: policeCars[0].x + direction.x, y: policeCars[0].y + direction.y, emoji: '👮‍' };
+
+            // 碰撞检测
+            if (head.x < 0 || head.x >= tileCount || head.y < 0 || head.y >= tileCount ||
+                policeCars.some(car => car.x === head.x && car.y === head.y)) {
+                resetGame();
+                return;
+            }
+
+            policeCars.unshift(head);
+
+            // 吃到食物时，不删除尾部
+            if (head.x === food.x && head.y === food.y) {
+                score++;
+                scoreElement.textContent = `Score: ${score}`;
+                placeFood();
+            } else {
+                policeCars.pop();
+            }
+
+            // 确保除了头部，其他都是警车
+            for (let i = 1; i < policeCars.length; i++) {
+                policeCars[i].emoji = policeCarEmoji;
+            }
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // 绘制警车和男警察
+            ctx.font = `${gridSize}px Arial`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            policeCars.forEach((car, index) => {
+                ctx.fillText(car.emoji, car.x * gridSize + gridSize / 2, car.y * gridSize + gridSize / 2);
+            });
+
+            // 绘制食物
+            ctx.fillText(foodEmoji, food.x * gridSize + gridSize / 2, food.y * gridSize + gridSize / 2);
+        }
+
+        function placeFood() {
+            do {
+                food.x = Math.floor(Math.random() * tileCount);
+                food.y = Math.floor(Math.random() * tileCount);
+            } while (policeCars.some(car => car.x === food.x && car.y === food.y));
+        }
+
+        function resetGame() {
+            policeCars = [{ x: 10, y: 10, emoji: '👮‍' }];
+            direction = { x: 0, y: 0 };
+            score = 0;
+            scoreElement.textContent = `Score: ${score}`;
+            placeFood();
+        }
+
+        function showEndAnimation() {
+            // 清空游戏框内容
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            EndAnimation.style.display = 'block';
+        }
+
+        window.addEventListener('keydown', e => {
+            if (e.key === 'ArrowUp' && direction.y === 0) direction = { x: 0, y: -1 };
+            if (e.key === 'ArrowDown' && direction.y === 0) direction = { x: 0, y: 1 };
+            if (e.key === 'ArrowLeft' && direction.x === 0) direction = { x: -1, y: 0 };
+            if (e.key === 'ArrowRight' && direction.x === 0) direction = { x: 1, y: 0 };
+        });
+
+        placeFood();
+        gameLoop();
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

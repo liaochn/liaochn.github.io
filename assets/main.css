@@ -185,7 +185,7 @@ footer {
 /** 响应式设计：小屏幕调整字体和布局 **/
 @media (max-width: 768px) {
     body {
-        font-size: 5vw; /* 更小的字体 */
+        font-size: 4vw; /* 更小的字体 */
     }
 
     .menu-icon {
@@ -215,7 +215,13 @@ footer {
     .container {
         padding: 10px;
     }
+    .footer-large {
+        font-size: 16px; /* 较大的字体大小 */
+        margin: 0; /* 去除默认的外边距 */
+        margin-bottom: 6px; /* 调整第一行与第二行之间的间距 */
 }
+}
+
 
 /* 小屏幕下显示菜单按钮 */
 @media (max-width: 768px) {
