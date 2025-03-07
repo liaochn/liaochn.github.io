@@ -68,15 +68,18 @@
         /* 虚拟方向键样式 */
         .controls {
             display: flex;
-            justify-content: center;
-            margin-top: 20px;
+            flex-direction: column;
+            align-items: center;
+        }
+        .row {
+            display: flex;
+            margin-top: 10px;
+            gap: 30px; /* 调整按钮之间的间距 */
         }
         .controls button {
             width: 50px;
             height: 50px;
             font-size: 20px;
-            margin-top: 20px;
-            margin: 5px;
             background-color: #f0f0f0;
             border: 2px solid #000;
             border-radius: 10px;
@@ -87,7 +90,7 @@
         }
 
         /* 平板样式（768px 以下） */
-        @media (max-width: 768px) {
+        @media (max-width: 1080px) {
             body {
                 padding: 10px;
             }
@@ -119,32 +122,34 @@
             .end-animation {
             display: none;
             position: absolute;
-            top: 40%;
+            top: 30%;
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
             font-size: 50px;
             }
-            /* 虚拟方向键样式 */
-            .controls {
-                display: flex;
-                justify-content: center;
-                margin-top: 20px;
-            }
-            .controls button {
-                width: 50px;
-                height: 50px;
-                font-size: 20px;
-                margin-top: 20px;
-                margin: 5px;
-                background-color: #f0f0f0;
-                border: 2px solid #000;
-                border-radius: 10px;
-                cursor: pointer;
-            }
-            .controls button:active {
-                background-color: #ccc;
-            }
+        /* 虚拟方向键样式 */
+        .controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .row {
+            display: flex;
+            margin-top: 10px;
+            gap: 30px; /* 调整按钮之间的间距 */
+        }
+        .controls button {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            background-color: #f0f0f0;
+            border: 2px solid #000;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .controls button:active {
+            background-color: #ccc;
         }
 
         /* 手机样式（480px 以下） */
@@ -173,7 +178,7 @@
             .end-animation {
             display: none;
             position: absolute;
-            top: 40%;
+            top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
@@ -187,26 +192,28 @@
                 font-size: 14px;
                 margin-top: 15px;
             }
-            /* 虚拟方向键样式 */
-            .controls {
-                display: flex;
-                justify-content: center;
-                margin-top: 20px;
-            }
-            .controls button {
-                width: 50px;
-                height: 50px;
-                font-size: 20px;
-                margin-top: 20px;
-                margin: 5px;
-                background-color: #f0f0f0;
-                border: 2px solid #000;
-                border-radius: 10px;
-                cursor: pointer;
-            }
-            .controls button:active {
-                background-color: #ccc;
-            }
+        /* 虚拟方向键样式 */
+        .controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .row {
+            display: flex;
+            margin-top: 10px;
+            gap: 20px; /* 调整按钮之间的间距 */
+        }
+        .controls button {
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+            background-color: #f0f0f0;
+            border: 2px solid #000;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .controls button:active {
+            background-color: #ccc;
         }
     </style>
 </head>
@@ -221,10 +228,14 @@
 
     <!-- 虚拟方向键（仅在小屏幕显示） -->
     <div class="controls" id="controls">
-        <button id="up">↑</button>
-        <button id="left">←</button>
-        <button id="down">↓</button>
-        <button id="right">→</button>
+        <div class="row">
+            <button id="up">⬆</button>
+        </div>
+        <div class="row">
+            <button id="left">⬅</button>
+            <button id="down">⬇</button>
+            <button id="right">➡</button>
+        </div>
     </div>
 
     <div class="footer">&copy; <span id="year"></span> by LI AO</div>
@@ -279,7 +290,7 @@
         function gameLoop() {
             update();
             draw();
-            if (score < 20) { // 分数达到 ? 时停止游戏
+            if (score < 10) { // 分数达到 ? 时停止游戏
                 setTimeout(gameLoop, 100);
             } else {
                 showEndAnimation();
