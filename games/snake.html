@@ -290,7 +290,7 @@
         function gameLoop() {
             update();
             draw();
-            if (score < 1) { // 分数达到 ? 时停止游戏
+            if (score < 10) { // 分数达到 ? 时停止游戏
                 setTimeout(gameLoop, 100);
             } else {
                 showEndAnimation();
