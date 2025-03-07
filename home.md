@@ -1,9 +1,7 @@
 <a href="./index.html?page=home_zh"><i class="fas fa-language fa-2x"></i></a>
 
 # Welcome to my website!
-
 ---
-
 I am a graduate student in the social sciences with a passion for exploring new technologies. I believe that the intersection of social science and artificial intelligence (AI) will play a pivotal role in shaping the future. Currently, my academic focus lies in the emerging field of Computational Social Science (CSS), where I aim to bridge the gap between these two domains.
 
 During my undergraduate studies, I had some exposure to computers and programming. However, when collaborating with classmates on startup projects, my attention was often directed more toward business strategy than technical implementation. One of my startup partners, who ventured into the internet industry early on, quickly outpaced me in technical expertise, and I noticed the growing gap between our skill sets. This realization, coupled with the recent surge in popularity of AI tools like ChatGPT and DeepSeek, reignited my long-standing desire to build my own website. With the assistance of these AI tools, I dedicated two days to creating this website.
