@@ -17,13 +17,11 @@ header {
     padding: 30px 20px;
     z-index: 1000; /* 确保导航栏在最上层 */
 }
-
 nav {
     display: flex;
     justify-content: center; /* 确保导航项居中 */
     align-items: center;
 }
-
 .nav-links {
     list-style: none;
     display: flex;
@@ -31,31 +29,26 @@ nav {
     margin: 0;
     padding: 0;
 }
-
 .nav-links li {
     margin: 0 15px; /* 设置项目之间的自适应间距 */
 }
-
 .nav-links a {
     color: #f2ecde;
     text-decoration: none;
     font-size: 1.8vw; /* 设置导航栏字体大小为相对视口宽度 */
 }
-
 /* 菜单导航键默认状态 */
 .special-hover {
     text-decoration: none; /* 去掉默认下划线 */
     color: inherit; /* 继承父元素颜色 */
     position: relative; /* 为伪元素定位 */
 }
-
 /* 鼠标悬停状态 */
 .special-hover:hover {
     text-decoration: underline; /* 添加下划线 */
     text-decoration-color: #f2ecde6; /* 下划线颜色 */
     text-decoration-thickness: 4px; /* 下划线厚度 */
 }
-
 /* 调整菜单按钮位置和样式 */
 .menu-icon {
     display: none; /* 默认隐藏 */
@@ -70,7 +63,6 @@ nav {
     z-index: 1001; /* 确保在最上层 */
     font-size: 30px; /* 增大图标大小 */
 }
-
 /* 调整主界面顶部间距，避免内容被导航栏遮挡 */
 .container {
     display: flex;
@@ -78,18 +70,15 @@ nav {
     margin: 80px auto 20px; /* 顶部留出导航栏高度 */
     padding: 40px;
 }
-
 /* 左侧个人信息栏 */
 .sidebar {
     width: 200px; /* 固定宽度 */
     margin-right: 60px; /* 与主内容的间距 */
     margin-top: 10vh; /* 使头像容器距离顶部有 10% 的视口高度 */
 }
-
 .profile {
     text-align: center;
 }
-
 /* 头像容器 */
 .profile-photo-container {
     display: inline-block;
@@ -99,7 +88,6 @@ nav {
     background-color: #f2ecde; /* 背景颜色 */
 
 }
-
 /* 头像样式 */
 .profile-photo {
     display: block;
@@ -119,7 +107,6 @@ nav {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
 /* 社交链接容器 */
 .social-links {
     display: flex;
@@ -127,7 +114,6 @@ nav {
     gap: 10px; /* 图标间距 */
     padding-left: 40px; /* 统一缩进距离 */
 }
-
 /* 每个社交链接 */
 .social-item a {
     display: flex;
@@ -137,7 +123,6 @@ nav {
     font-size: 20px;
     transition: color 0.3s ease;
 }
-
 /* 图标样式 */
 .social-item i {
     font-size: 28px; /* 图标大小 */
@@ -171,47 +156,40 @@ footer {
     color: #f2ecde;
     margin-top: 20px;
 }
-
 .footer-large {
     font-size: 20px; /* 较大的字体大小 */
     margin: 0; /* 去除默认的外边距 */
     margin-bottom: 8px; /* 调整第一行与第二行之间的间距 */
 }
-
 .footer-small {
     font-size: 16px; /* 较小的字体大小 */
     margin: 0; /* 去除默认的外边距 */
 }
+
 /** 响应式设计：小屏幕调整字体和布局 **/
 @media (max-width: 768px) {
     body {
         font-size: 4vw; /* 更小的字体 */
     }
-
     .menu-icon {
         display: flex;
     }
-
     .nav-links {
         display: none;
         flex-direction: column;
         width: 100%;
         background-color: #333;
     }
-
     .nav-links.active {
         display: flex;
     }
-
     .nav-links li {
         margin: 20px 0;
         text-align: center;
     }
-
     .sidebar {
         display: none;
     }
-
     .container {
         padding: 10px;
     }
@@ -220,8 +198,6 @@ footer {
         margin: 0; /* 去除默认的外边距 */
         margin-bottom: 6px; /* 调整第一行与第二行之间的间距 */
 }
-}
-
 
 /* 小屏幕下显示菜单按钮 */
 @media (max-width: 768px) {
@@ -230,7 +206,6 @@ footer {
         align-items: center; /* 垂直居中 */
         justify-content: center; /* 水平居中 */
     }
-
     /* 导航栏样式 */
     .nav-links {
         display: none; /* 默认隐藏 */
@@ -244,18 +219,15 @@ footer {
         width: auto; /* 宽度自适应 */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 阴影 */
     }
-
     /* 导航栏显示时的样式 */
     .nav-links.active {
         display: flex; /* 显示导航栏 */
     }
-
     /* 导航项样式 */
     .nav-links li {
         margin: 6px 0; /* 间距 */
         text-align: left; /* 文字左对齐 */
     }
-
     /* 导航链接样式 */
     .nav-links a {
         display: flex; /* 弹性布局 */
@@ -266,19 +238,16 @@ footer {
         color: #f2ecde; /* 文字颜色 */
         text-decoration: none; /* 去掉下划线 */
     }
-
         /* 隐藏导航链接中的文字 */
     .nav-links a span {
         display: none; /* 隐藏文字 */
     }
-
     /* 调整图标样式 */
     .nav-links a i {
         font-size: 24px; /* 图标大小 */
         margin-right: 0; /* 去掉图标和文字的间距 */
     }
 }
-
 
 /** 响应式设计：平板设备 **/
 @media (min-width: 768px) and (max-width: 1200px) {
@@ -296,22 +265,18 @@ footer {
         width: 120px; /* 缩小宽度 */
         height: 120px; /* 缩小高度 */
     }
-
     /* 头像调整 */
     .profile-photo {
         width: 120px; /* 缩小宽度 */
         height: 120px; /* 缩小高度 */
     }
-
     /* 名字和简介字体调整 */
     .profile-name {
         font-size: 24px; /* 缩小字体 */
     }
-
     .profile-bio {
         font-size: 16px; /* 缩小字体 */
     }
-
     /* 社交链接图标调整 */
     .social-item i {
         font-size: 20px; /* 缩小图标 */
@@ -326,4 +291,3 @@ footer {
         font-size: 16px; /* 缩小文字 */
     }
 }
-
