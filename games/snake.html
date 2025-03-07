@@ -178,7 +178,7 @@
             .end-animation {
             display: none;
             position: absolute;
-            top: 50%;
+            top: 40%;
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
@@ -201,12 +201,12 @@
         .row {
             display: flex;
             margin-top: 10px;
-            gap: 20px; /* 调整按钮之间的间距 */
+            gap: 30px; /* 调整按钮之间的间距 */
         }
         .controls button {
-            width: 30px;
-            height: 30px;
-            font-size: 18px;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
             background-color: #f0f0f0;
             border: 2px solid #000;
             border-radius: 10px;
@@ -290,7 +290,7 @@
         function gameLoop() {
             update();
             draw();
-            if (score < 10) { // 分数达到 ? 时停止游戏
+            if (score < 1) { // 分数达到 ? 时停止游戏
                 setTimeout(gameLoop, 100);
             } else {
                 showEndAnimation();
