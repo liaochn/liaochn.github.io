@@ -260,7 +260,7 @@
     <script>
         const canvas = document.getElementById('gameCanvas');
         const ctx = canvas.getContext('2d');
-        const gridSize = 30;
+        const gridSize = 25;
         const tileCount = canvas.width / gridSize;
 
         let policeCars = [{ x: 10, y: 10, emoji: '👮‍' }];
@@ -296,8 +296,8 @@
         function gameLoop() {
             update();
             draw();
-            if (score < 10) { // 分数达到 ? 时停止游戏...........................................................
-                setTimeout(gameLoop, 100);
+            if (score < 20) { // 分数达到 ? 时停止游戏...........................................................
+                setTimeout(gameLoop, 150); // 游戏速度调整，越大越慢...........................................................
             } else {
                 showEndAnimation();
             }
