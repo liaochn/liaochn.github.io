@@ -17,7 +17,7 @@
             margin-bottom: 10px;
         }
         .game-info {
-            width: 600px;
+            width: 500px;
             margin: 0 auto 10px;
             display: flex;
             justify-content: space-between;
@@ -30,6 +30,10 @@
         .instructions {
             font-size: 22px;
             text-align: right;
+        }
+        .game-container {
+            position: relative; /* 关键：使 .end-animation 相对于 .game-container 定位 */
+            display: inline-block; /* 使容器大小与 canvas 一致 */
         }
         canvas {
             border: 2px solid #000;
@@ -50,14 +54,17 @@
             text-align: center;
             font-size: 80px;
         }
+        .end-emoji {
+        white-space: nowrap; /* 关键：防止内容换行 */
+        }
         .end-zh {
-                font-size: 22px;
-                margin-top: 30px;
-            }
+            font-size: 22px;
+            margin-top: 30px;
+        }
         .end-en {
-                font-size: 18px;
-                margin-top: 20px;
-            }
+            font-size: 18px;
+            margin-top: 20px;
+        }
         .end-animation a {
             color: #007BFF;
             text-decoration: none;
@@ -89,7 +96,7 @@
             background-color: #ccc;
         }
 
-        /* 平板样式（768px 以下） */
+        /* 平板样式（1080px 以下） */
         @media (max-width: 1080px) {
             body {
                 padding: 10px;
@@ -105,29 +112,26 @@
                 width: 90%;
                 max-width: 400px;
                 flex-direction: column;
-                align-items: flex-start;
             }
             .score, .instructions {
                 font-size: 16px;
                 margin: 5px 0;
             }
-            canvas {
+            .game-container {
                 width: 90%;
                 max-width: 400px;
+            }
+            canvas {
+                width: 100%;
                 height: auto;
             }
             .footer {
                 font-size: 14px;
             }
             .end-animation {
-            display: none;
-            position: absolute;
-            top: 30%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            font-size: 50px;
+                font-size: 50px;
             }
+        }
         /* 虚拟方向键样式 */
         .controls {
             display: flex;
@@ -168,20 +172,18 @@
             .score, .instructions {
                 font-size: 14px;
             }
-            canvas {
+            .game-container {
                 width: 100%;
                 max-width: 300px;
+            }
+            canvas {
+                width: 100%;
+                height: auto;
             }
             .footer {
                 font-size: 12px;
             }
             .end-animation {
-            display: none;
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
             font-size: 40px;
             }
             .end-zh {
@@ -224,8 +226,21 @@
         <div class="score" id="score">Score: 0</div>
         <div class="instructions">Control: ↑，↓，←，→</div>
     </div>
-    <canvas id="gameCanvas" width="600" height="600"></canvas>
-
+    <div class="game-container">
+        <canvas id="gameCanvas" width="500" height="500"></canvas>
+        <!-- 结束动画 -->
+        <div class="end-animation" id="EndAnimation">
+            <div class="end-emoji">
+                👮‍😒🚓
+            </div>
+            <div class="end-zh">
+                成功抓捕在逃网页，回<a href="../index.html">首页</a>告诉站长
+            </div>
+            <div class="end-en">
+                <p>Successfully caught the runaway webpage. <br>Return to the <a href="../index.html">homepage</a> to inform the webmaster.</p>
+            </div>
+        </div>
+    </div>
     <!-- 虚拟方向键（仅在小屏幕显示） -->
     <div class="controls" id="controls">
         <div class="row">
@@ -238,18 +253,9 @@
         </div>
     </div>
 
-    <div class="footer">&copy; <span id="year"></span> by LI AO</div>
+    <div class="footer">&copy; <span id="year"></span> by Li Ao. All Rights Reserved.</div>
 
-    <!-- 结束动画 -->
-    <div class="end-animation" id="EndAnimation">
-        <div>👮‍😒🚓</div>
-        <div class="end-zh">
-            成功抓捕在逃网页，回<a href="../index.html">首页</a>告诉站长
-        </div>
-        <div class="end-en">
-            <p>Successfully caught the runaway webpage. <br>Return to the <a href="../index.html">homepage</a> to inform the webmaster.</p>
-        </div>
-    </div>
+
 
     <script>
         const canvas = document.getElementById('gameCanvas');
@@ -290,7 +296,7 @@
         function gameLoop() {
             update();
             draw();
-            if (score < 10) { // 分数达到 ? 时停止游戏
+            if (score < 10) { // 分数达到 ? 时停止游戏...........................................................
                 setTimeout(gameLoop, 100);
             } else {
                 showEndAnimation();
