@@ -54,7 +54,7 @@ const loadContent = () => {
         })
         .then(markdown => {
             // 解析 Markdown 并插入到页面
-            document.getElementById('content').innerHTML = marked.parse(markdown);
+            document.getElementById('markdown-content').innerHTML = marked.parse(markdown);
             // 提取 Markdown 标题（第一行的 # 标题）
             const firstLine = markdown.split('\n').find(line => line.startsWith('# '));
             if (firstLine) {
@@ -66,7 +66,7 @@ const loadContent = () => {
         })
         .catch(error => {
             console.error('Failed to load:', error);
-            document.getElementById('content').innerHTML = '<p style="color: red;">Failed to load, please check the console</p>';
+            document.getElementById('markdown-content').innerHTML = '<p style="color: red;">Failed to load, please check the console</p>';
             document.title = 'Error - LI AO personal website';
         });
 };

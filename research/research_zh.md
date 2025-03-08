@@ -1,8 +1,6 @@
-<a href="./index.html?page=research/research"><i class="fas fa-language fa-2x"></i></a>
+<div style="text-align: right;"><a href="./index.html?page=research/research"><i class="fas fa-language fa-2x"></i></a></div>
 
 # 我的学术研究
-
-欢迎来到我的学术研究页面！
 
 ---
 

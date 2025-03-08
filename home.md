@@ -1,19 +1,18 @@
-<a href="./index.html?page=home_zh"><i class="fas fa-language fa-2x"></i></a>
+<div style="text-align: right;"><a href="./index.html?page=home_zh"><i class="fas fa-language fa-2x"></i></a></div>
 
-# Welcome to my website!
+# Welcome to my website! 👋
+
 ---
-I am a graduate student in the social sciences with a passion for exploring new technologies. I believe that the intersection of social science and artificial intelligence (AI) will play a pivotal role in shaping the future. Currently, my academic focus lies in the emerging field of Computational Social Science (CSS), where I aim to bridge the gap between these two domains.
 
-During my undergraduate studies, I had some exposure to computers and programming. However, when collaborating with classmates on startup projects, my attention was often directed more toward business strategy than technical implementation. One of my startup partners, who ventured into the internet industry early on, quickly outpaced me in technical expertise, and I noticed the growing gap between our skill sets. This realization, coupled with the recent surge in popularity of AI tools like ChatGPT and DeepSeek, reignited my long-standing desire to build my own website. With the assistance of these AI tools, I dedicated two days to creating this website.
+I am a graduate student in public administration 🧑‍🎓 with a strong passion for exploring new technologies. I believe that the intersection of social science and artificial intelligence (AI) will have a profound impact on the future. Currently, my academic focus lies in the emerging field of Computational Social Science (CSS). I aim to learn and apply AI from the perspective of a social science researcher, bridging the gap between social science and technology, and preparing for the full arrival of the AI era.
 
-Initially, I considered using a website builder like Jekyll, which promises quick deployment with minimal effort by following its documentation. However, I soon discovered that the templates available did not align with my vision, and attempting to customize them led to a cascade of new issues. Moreover, I realized that many of the advanced features offered by these platforms were unnecessary for my needs. After several frustrating attempts and multiple deletions of my project repository, I decided to start from scratch, writing every line of code myself.
+During my undergraduate studies, I majored in engineering and gained exposure to computers and programming. I collaborated with computer science classmates on a startup project, and we successfully registered our company. However, my attention was more focused on business strategy rather than technical implementation. In graduate school, I shifted my focus to social science research, but my enthusiasm for computers and AI never waned. I have been continuously exploring how to better apply these technologies to the field of social science.
 
-I adopted a minimalist approach to build my academic and personal blogging site, relying solely on HTML, CSS, JavaScript, and Markdown. By using HTML to manage my Markdown files, I created a simple yet functional platform. While the process may seem rudimentary, the two days I spent crafting this website brought me immense satisfaction and a sense of accomplishment.
+Building a personal website has always been on my mind. A long time ago, I considered using a website builder such as Jekyll to build a website. For the uninitiated, these tools are simple to use and allow for quick deployment of a website. However, I quickly realized that once I tried to modify the code the way I wanted, problems kept popping up. Eventually, I realized that my knowledge of creating websites was limited and the matter was put on hold.
+
+The recent popularity of AI tools like ChatGPT and DeepSeek reignited my passion for building a personal website. With the help of AI tools, I started learning from scratch and eventually created this site. Throughout the process, I gained a wealth of new knowledge and brought my ideas and designs to life, which gave me a great sense of accomplishment 😊.
 
 I plan to continue updating and refining this site as I further develop my skills and explore new ideas.
-
-- Email: liao1@ucass.edu.cn
-- [GitHub](https://github.com/)
 
 ---
 

@@ -2,13 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- begin SEO -->
     <title>Li Ao 's personal website</title>
+    <meta name="description" content="Welcome to Li Ao 's personal website.">
+    <meta name="keywords" content="Li Ao, personal website, research, blog">
+    <meta name="author" content="Li Ao">
+    <meta property="og:locale" content="en-US">
+    <meta property="og:site_name" content="Li Ao 's personal website">
+    <meta property="og:title" content="Home Page – Li Ao">
+    <meta property="og:url" content="https://li-ao.com">
+    <meta property="og:description" content="Welcome to Li Ao's personal website.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="application/ld+json"> {
+"@context" : "http://schema.org", "@type" : "Person", "name" : "Li Ao", "url" : "https://li-ao.com", "sameAs" : null
+    }
+    </script>
+    <!-- end SEO -->
+    <link rel="canonical" href="https://li-ao.com/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./assets/main.css">
+    <link rel="stylesheet" href="./assets/markdown-styles.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="/assets/load-head-content.js" defer></script>
-    <script src="/assets/main.js" defer></script>
+    <script src="./assets/load-head-content.js" defer></script>
+    <script src="./assets/main.js" defer></script>
 </head>
 <body>
     <header>
@@ -23,12 +40,13 @@
                     Li &nbsp;Ao
             </div>
             <ul class="nav-links" id="nav-links">
-                <li><a href="./index.html" > <span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span> <i class="fas fa-home"> <span> &nbsp; &nbsp; &#124; &nbsp; </span></i></a></li>
-                <li><a href="./index.html?page=cv/cv" class="special-hover"><i class="fas fa-file-alt"></i> <span>CV</span> </a></li>
-                <li><a href="./index.html?page=research/research" class="special-hover"><i class="fa-solid fa-user-graduate"></i> <span>Research</span></a></li>
-                <li><a href="./index.html?page=interest/interest" class="special-hover"><i class="fas fa-heart"></i> <span>Interest</span></a></li>
-                <li><a href="./index.html?page=thought/thought" class="special-hover"><i class="fas fa-lightbulb"></i> <span>Thought</span></a></li>
-                <li><a href="/404.html"> <span>&nbsp; &nbsp;</span> <i class="fa-solid fa-hand-sparkles"></i></a></li>
+                <li><a href="./index.html" style="margin: 0 80px 0 0;"><i class="fas fa-home"></i></a></li>
+                <li><a href="./index.html?page=cv/cv" class="special-hover"><i class="fas fa-file-alt"></i><span>CV</span></a></li>
+                <li><a href="./index.html?page=research/research" class="special-hover"><i class="fa-solid fa-user-graduate"></i><span>Research</span></a></li>
+                <li><a href="./index.html?page=interest/interest" class="special-hover"><i class="fas fa-heart"></i><span>Interest</span></a></li>
+                <li><a href="./index.html?page=thought/thought" class="special-hover"><i class="fas fa-lightbulb"></i><span>Thought</span></a></li>
+                <li><a href="/404.html" style="margin: 0 0 0 80px;"><i class="fas fa-hand-sparkles"></i></a></li>
+                <li><a href="/404.html"><i class="fas fa-music"></i></a></li>
             </ul>
         </nav>
     </header>
@@ -43,12 +61,12 @@
                     <b>Li &nbsp;Ao</b>
                 </div>
                 <div class="profile-bio">
-                    Learning every day.
+                    Happy first, lying flat.
                 </div>
                 <div class="social-links">
                     <div class="social-item">
                         <a href="mailto:liao1@ucass.edu.cn">
-                            <i class="fas fa-envelope"></i>
+                            <i class="far fa-envelope"></i>
                             <span>Email</span>
                         </a>
                     </div>
@@ -80,7 +98,7 @@
             </div>
         </aside>
         <!-- 主要内容区域 -->
-        <main class="content" id="content">
+        <main class="markdown-content" id="markdown-content">
             <!-- Markdown 内容将动态加载到这里 -->
             <p>loading......</p>
         </main>
