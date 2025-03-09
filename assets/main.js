@@ -59,7 +59,7 @@ const loadContent = () => {
             const firstLine = markdown.split('\n').find(line => line.startsWith('# '));
             if (firstLine) {
                 const title = firstLine.replace('# ', '').trim();
-                document.title = title + ' - LI AO personal website';
+                document.title = title + " - Li Ao 's personal website";
             } else {
                 document.title = "Li Ao 's personal website";
             }
@@ -67,7 +67,7 @@ const loadContent = () => {
         .catch(error => {
             console.error('Failed to load:', error);
             document.getElementById('markdown-content').innerHTML = '<p style="color: red;">Failed to load, please check the console</p>';
-            document.title = 'Error - LI AO personal website';
+            document.title = "Error - Li Ao 's personal website";
         });
 };
 // 页面加载时初始化内容

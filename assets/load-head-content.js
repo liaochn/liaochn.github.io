@@ -3,6 +3,6 @@ fetch('./assets/head-content.html')
     .then(response => response.text())
     .then(data => {
         // 将内容插入到 <head> 中
-        document.head.insertAdjacentHTML('beforeend', data);
+        document.head.insertAdjacentHTML('before end', data);
     })
-    .catch(error => console.error('加载 head-content.html 失败:', error));
+    .catch(error => console.error('Fail to load head-content.html', error));
