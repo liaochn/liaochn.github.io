@@ -69,7 +69,6 @@
 }
 .markdown-content a {
   color: #007bff; /* 链接颜色 */
-  text-decoration: none; /* 移除下划线 */
 }
 /* ==================== */
 /* 设置连接图标颜色 */
@@ -123,7 +122,6 @@
 /* 悬停链接 */
 .markdown-content a:hover {
   color: #0056b3;
-  text-decoration: underline;
 }
 
 /* 点击链接 */
