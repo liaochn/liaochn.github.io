@@ -67,117 +67,67 @@
   margin-top: 1em; /* 上边距 */
   margin-bottom: 1em; /* 下边距 */
 }
-
-/* ==================== */
-/* 列表样式 */
-/* ==================== */
-.markdown-content ul,
-.markdown-content ol {
-  font-size: 1em; /* 列表字体大小 */
-  margin-top: 1em;
-  margin-bottom: 1em;
-  padding-left: 2em; /* 列表缩进 */
-}
-
-.markdown-content li {
-  margin-bottom: 0.5em; /* 列表项间距 */
-}
-
-/* ==================== */
-/* 代码样式 */
-/* ==================== */
-.markdown-content pre {
-  font-size: 0.875em; /* 代码块字体大小 */
-  background-color: #f5f5f5; /* 代码块背景色 */
-  padding: 1em; /* 内边距 */
-  border-radius: 4px; /* 圆角 */
-  overflow-x: auto; /* 横向滚动 */
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-
-.markdown-content code {
-  font-family: "Courier New", Courier, monospace; /* 代码字体 */
-  font-size: 0.875em; /* 代码字体大小 */
-  background-color: #f5f5f5; /* 代码背景色 */
-  padding: 0.2em 0.4em; /* 内边距 */
-  border-radius: 3px; /* 圆角 */
-}
-
-/* ==================== */
-/* 链接样式 */
-/* ==================== */
 .markdown-content a {
   color: #007bff; /* 链接颜色 */
   text-decoration: none; /* 移除下划线 */
 }
+/* ==================== */
+/* 设置连接图标颜色 */
+/* ==================== */
+/* 未访问链接 */
+.markdown-content a:link .fas {
+  color: #007bff;
+}
 
+/* 已访问链接 */
+.markdown-content a:visited .fas {
+  color: #6c757d;
+}
+
+/* 鼠标悬停颜色 */
+.markdown-content a:hover .fas {
+  color: #0056b3;
+}
+
+/* 点击时颜色 */
+.markdown-content a:active .fas {
+  color: #004080;
+}
+
+/* 设置翻译键图标颜色 */
+/*未访问状态*/
+/*.markdown-content a i.fas.fa-language {
+  color: #a78e44;
+}
+/*鼠标悬停颜色*/
+/*.markdown-content a:hover i.fas.fa-language {
+  color: #eacd76;
+}
+/*点击时状态*/
+/*.markdown-content a:active i.fas.fa-language {
+  color: #eacd76;
+}
+
+
+/* 设置文本链接颜色 */
+/* 未访问链接 */
+.markdown-content a:link {
+  color: #007bff;
+}
+
+/* 已访问链接 */
+.markdown-content a:visited {
+  color: #6c757d;
+}
+
+/* 悬停链接 */
 .markdown-content a:hover {
-  text-decoration: underline; /* 鼠标悬停时显示下划线 */
+  color: #0056b3;
+  text-decoration: underline;
 }
 
-/* ==================== */
-/* 引用样式 */
-/* ==================== */
-.markdown-content blockquote {
-  font-size: 1em; /* 引用字体大小 */
-  margin: 1em 0; /* 外边距 */
-  padding: 0.5em 1em; /* 内边距 */
-  background-color: #f9f9f9; /* 背景色 */
-  border-left: 4px solid #ccc; /* 左侧边框 */
-  color: #666; /* 文字颜色 */
+/* 点击链接 */
+.markdown-content a:active {
+  color: #004080;
 }
 
-/* ==================== */
-/* 表格样式 */
-/* ==================== */
-.markdown-content table {
-  width: 100%; /* 表格宽度 */
-  border-collapse: collapse; /* 合并边框 */
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-
-.markdown-content th,
-.markdown-content td {
-  padding: 0.75em; /* 单元格内边距 */
-  border: 1px solid #ddd; /* 边框 */
-  text-align: left; /* 文字对齐 */
-}
-
-.markdown-content th {
-  background-color: #f5f5f5; /* 表头背景色 */
-  font-weight: bold; /* 加粗 */
-}
-
-/* ==================== */
-/* 图片样式 */
-/* ==================== */
-.markdown-content img {
-  max-width: 100%; /* 图片最大宽度 */
-  height: auto; /* 高度自适应 */
-  margin-top: 1em;
-  margin-bottom: 1em;
-  border-radius: 4px; /* 圆角 */
-}
-
-/* ==================== */
-/* 分隔线样式 */
-/* ==================== */
-.markdown-content hr {
-  border: 0; /* 移除默认边框 */
-  height: 1px; /* 高度 */
-  background-color: #ddd; /* 背景色 */
-  margin: 1em 0; /* 外边距 */
-}
-
-/* ==================== */
-/* 强调样式 */
-/* ==================== */
-.markdown-content strong {
-  font-weight: bold; /* 加粗 */
-}
-
-.markdown-content em {
-  font-style: italic; /* 斜体 */
-}

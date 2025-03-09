@@ -3,5 +3,4 @@
 # My Interests
 
 ---
-
-Welcome to my interests page! Here, I share my passions and hobbies beyond academic research.
+Welcome to my interests page!👋 Here, I share my passions and hobbies beyond academic research.🤹

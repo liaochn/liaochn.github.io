@@ -10,10 +10,9 @@ During my undergraduate studies, I majored in engineering and gained exposure to
 
 Building a personal website has always been on my mind. A long time ago, I considered using a website builder such as Jekyll to build a website. For the uninitiated, these tools are simple to use and allow for quick deployment of a website. However, I quickly realized that once I tried to modify the code the way I wanted, problems kept popping up. Eventually, I realized that my knowledge of creating websites was limited and the matter was put on hold.
 
-The recent popularity of AI tools like ChatGPT and DeepSeek reignited my passion for building a personal website. With the help of AI tools, I started learning from scratch and eventually created this site. Throughout the process, I gained a wealth of new knowledge and brought my ideas and designs to life, which gave me a great sense of accomplishment 😊.
+The recent popularity of AI tools like ChatGPT and DeepSeek reignited my passion for building a personal website. With the help of AI tools, I started learning from scratch and eventually created this site. Throughout the process, I gained a wealth of new knowledge and brought my ideas and designs to life, which gave me a great sense of accomplishment.😊
 
-I plan to continue updating and refining this site as I further develop my skills and explore new ideas.
+I plan to continue updating and refining this site as I further develop my skills and explore new ideas.💪
 
 ---
-
-Thanks for visiting!
+2025.03.09

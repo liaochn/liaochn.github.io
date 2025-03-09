@@ -3,5 +3,4 @@
 # My Thoughts
 
 ---
-
-Welcome to my thoughts page! Here, I share my reflections, ideas, and perspectives on various topics.
+Welcome to my thoughts page!👋 Here, I share my reflections, ideas, and perspectives on various topics.📖🖋️
