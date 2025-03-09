@@ -38,6 +38,15 @@ nav {
     text-decoration: none; /* 去掉默认下划线 */
     font-size: 1.8vw; /* 设置导航栏字体大小为相对视口宽度 */
 }
+    .nav-links li:nth-child(1) {
+        margin: 0 80px 0 0; /* 单独调整图标 */
+    }
+    .nav-links li:nth-child(6) {
+        margin: 0 0 0 40px; /* 单独调整图标 */
+    }
+    .nav-links li:nth-child(7) {
+        margin: 0 60px 0 0; /* 单独调整图标 */
+    }
 /* 菜单导航键默认状态 */
 .special-hover {
     text-decoration: none; /* 去掉默认下划线 */
@@ -301,14 +310,23 @@ footer {
         justify-content: center; /* 水平居中 */
         align-items: center; /* 垂直居中 */
         font-size: 16px; /* 字体大小 */
-        padding: 8px 16px; /* 内边距 */
+        padding: 8px; /* 内边距 */
         color: #f2ecde; /* 文字颜色 */
         text-decoration: none; /* 去掉下划线 */
     }
     /* 调整图标样式 */
-    .nav-links a i {
+    .nav-links i {
         font-size: 24px; /* 图标大小 */
-        margin-right: 0; /* 去掉图标和文字的间距 */
+        margin: 0px;
+    }
+    .nav-links li:nth-child(1) {
+        margin: 0; /* 单独调整图标 */
+    }
+    .nav-links li:nth-child(6) {
+        margin: 0; /* 单独调整图标 */
+    }
+    .nav-links li:nth-child(7) {
+        margin: 0; /* 单独调整图标 */
     }
     /* 隐藏导航链接中的文字 */
     .nav-links a span {
