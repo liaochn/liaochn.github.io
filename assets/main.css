@@ -306,7 +306,7 @@ footer {
     }
     /* 重置自定义导航项样式 */
     .nav-links li:nth-child(1) {
-        margin: 0; /* 单独调整图标 */
+        margin: 6px 0; /* 单独调整图标 */
     }
     .nav-links li:nth-child(6) {
         margin: 6px 0; /* 单独调整图标 */
