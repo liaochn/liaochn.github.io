@@ -13,7 +13,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #312520;
+    background-color: #493131;
     padding: 20px 80px;
     z-index: 1000; /* 确保导航栏在最上层 */
 }
@@ -66,7 +66,7 @@ nav {
     top: 6px; /* 距离顶部 */
     right: 20px; /* 距离右侧 */
     color: #f2ecde;
-    background-color: #312520; /* 背景颜色 */
+    background-color: #493131; /* 背景颜色 */
     padding: 10px; /* 内边距 */
     border-radius: 4px; /* 圆角 */
     cursor: pointer;
@@ -80,7 +80,7 @@ nav {
     top: 6px; /* 距离顶部 */
     left: 20px; /* 距离左侧 */
     color: #f2ecde;
-    background-color: #312520; /* 背景颜色 */
+    background-color: #493131; /* 背景颜色 */
     padding: 10px; /* 内边距 */
     border-radius: 4px; /* 圆角 */
     cursor: pointer;
@@ -97,7 +97,7 @@ nav {
     font-size: 26px;
     font-weight: bold;
     color: #f2ecde;
-    background-color: #312520;
+    background-color: #493131;
     padding: 8px 16px;
     border-radius: 6px;
     z-index: 1001;
@@ -124,7 +124,7 @@ nav {
 .profile-photo-container {
     display: inline-block;
     padding: 2px; /* 边框和内边距 */
-    border: 4px double #312520; /* 灰色双线边框 */
+    border: 4px double #493131; /* 灰色双线边框 */
     border-radius: 50%; /* 圆形 */
     background-color: #f2ecde; /* 背景颜色 */
     width: 160px; /* 缩小容器宽度 */
@@ -192,7 +192,7 @@ nav {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #312520;
+    background-color: #493131;
     color: #f2ecde;
 }
 .footer-large {
@@ -283,7 +283,7 @@ footer {
         position: fixed; /* 固定定位 */
         top: 50px; /* 距离顶部 */
         right: 12px; /* 距离右侧 */
-        background-color: #312520; /* 背景颜色 */
+        background-color: #493131; /* 背景颜色 */
         border-radius: 4px; /* 圆角 */
         padding: 10px 0; /* 内边距 */
         flex-direction: column; /* 垂直排列 */

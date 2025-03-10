@@ -3,7 +3,7 @@
 # My Academic Research
 
 ---
-Welcome to my research page!👋 Here, I share my priorities in academic research.🔍
+Welcome to my research page!👋 Here, I share my priorities in academic research.📖🔍
 ## Research Direction 1: Public Administration
 [Paper](./index.html?page=research/2024.4.23/Paper_2024.04.23)
 
