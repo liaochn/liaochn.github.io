@@ -4,3 +4,14 @@
 
 ---
 Welcome to my thoughts page!👋 Here, I share my reflections, ideas, and perspectives on various topics.📖🖋️
+
+- [test 1](#001)
+- [test 2](#002)
+
+<a id="001"></a>
+## test 1
+...
+
+<a id="002"></a>
+## test 2
+...
